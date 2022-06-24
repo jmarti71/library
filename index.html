@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="controller.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Library</title>
+</head>
+<body>
+    <div class="heading">
+        <p>Library</p>
+    </div>
+    <div class="sub-heading">
+        <p>My Books</p>
+        <button class="material-symbols-outlined add-button" title="Add book to library">library_add</button>
+    </div>
+    <div class="library">
+    </div>
+    <form class="new-book-form" action="#">
+        <div class="add-form hide">
+            <input type="text" id="input_title" placeholder="Book Title" title="Enter book title">
+            <input type="text" id="input_author" placeholder="Author" title="Enter name of author">
+            <input type="number" id="input_pages" placeholder="Number of pages" title="Must enter a number">
+            <p class="form-error hide">*Please fill all input fields</p>
+            <div class="checkbox-div">
+                <label for="read-box">Finished Reading?</label>
+                <input type="checkbox" name="has-read" id="read_box">
+            </div>
+            <button type="submit" id="btn_submit">Add Book</button>
+            <a class="cancel" href="#">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>
