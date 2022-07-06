@@ -34,7 +34,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-Book.prototype.toggle_read = function(checkBtn) {
+Book.prototype.toggleRead = function(checkBtn) { 
     if(this.read === true) {
         this.read = false;
         checkBtn.textContent = 'check_box_outline_blank';
@@ -153,7 +153,7 @@ function createCardElements (title, author, pages, read_status, index) {
 function changeReadStatus(book_index, check_btn) {
     const changed_book = new Book(myLibrary[book_index].title, myLibrary[book_index].author, 
         myLibrary[book_index].pages, myLibrary[book_index].read);
-    changed_book.toggle_read(check_btn);
+    changed_book.toggleRead(check_btn);
     myLibrary[book_index] = changed_book;
     console.log(myLibrary);
 }
