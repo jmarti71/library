@@ -27,21 +27,22 @@ let myLibrary = [
       }
 ];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-Book.prototype.toggleRead = function(checkBtn) { 
-    if(this.read === true) {
-        this.read = false;
-        checkBtn.textContent = 'check_box_outline_blank';
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
-    else if (this.read === false) {
-        this.read = true;
-        checkBtn.textContent = 'select_check_box';
+    toggleRead(checkBtn) {
+        if (this.read === true) {
+            this.read = false;
+            checkBtn.textContent = 'check_box_outline_blank';
+        }
+        else if (this.read === false) {
+            this.read = true;
+            checkBtn.textContent = 'select_check_box';
+        }
     }
 }
 
