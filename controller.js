@@ -60,12 +60,10 @@ function toggleBookForm() {
 // Check field inputs since preventing default, and push to library if no error
 function createBookProperties () {
     if(!form_title.checkValidity()) {
-        form_error.className = "form-error show"
-        console.log("form error with" + form_title);
+        form_error.className = "form-error show";
     }
     else if(!form_author.checkValidity()) {
-        form_error.className = "form-error show"
-        console.log("form error with" + form_author);
+        form_error.className = "form-error show";
     }
     else if(!form_pages.checkValidity()){
         form_error.className = "form-error show"
